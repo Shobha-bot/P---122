@@ -1,0 +1,80 @@
+Task1 : Define the variables:
+
+    First define the below variables:
+
+    Set the screen_width and screen_height and initialize them to 0.   Done
+
+    Define a variable as apple to hold the image of apple and set it to empty.   Done
+
+    Define a variable speak_data to hold the speech which we want the system to speak and set it to empty.    Done
+
+    Then define a variable to_number to hold the number said by the user and set it to empty. Done
+
+
+Task2 : Load Image:
+
+    Define a function as preload and inside it write the following code:
+
+    Using the loadImage() function, load the apple image provided to you and store this in the apple variable.   Done
+
+
+Task3 : Inside the recognition.onresult function add the below code:
+
+    Write the code to convert the value present in the variable content to number, using the Number() function and store 
+    it in the variable to_number.      Done
+
+    After that check if the value of the to_number variable is integer, by using the Number.isInteger() function:
+
+    And if it is true then set the status as “Started drawing apple”, and set the value of the draw_apple variable as “set”.   Done
+    
+    So in the else part, set the status of the text as "The speech has not recognized a number ". Done
+
+
+Task4 : Inside the setup() function add the below code:
+
+    Inside the variable screen_width store the width of the browser window, using the window.innerWidth() function. Done
+
+    Similarly get the height and store it in the screen_height variable.    Done
+
+    Create the canvas using the createCanvas() function and inside it pass two 
+    parameters as screen_width, screen_height-150.     Done
+
+    We are deducting 150 from height to give the spacing between the Draw button and the canvas.     Okay
+
+    Then using the canvas.position() function set the image at the coordinates between 0 and 150.    Done
+    
+    So our canvas is positioned as per the width and height of the screen.   Okay
+
+
+
+Task5: Inside the draw() function add the below code:
+
+    Inside the If condition after checking draw_apple==”set”, write a for loop to iterate over 
+    the number present in the to_number variable:      
+
+    Initialize a variable i to 1.    Done
+
+    Check if i is less than or equal to the to_number variable.   Done
+
+    Increment the value of i by 1.   Done
+
+    Now, inside the for loop set the value of x and y coordinates, for this:
+
+    Use Math.floor() function and write the Math.random() function inside it and multiply it by 700 (or any value 
+    less than the screen_width).     Done
+    
+    And store this value in the variable x.    Done
+
+    Use the same logic for finding the y coordinate.     Done
+
+    And multiply by 400 (any value less than the screen_height).     Done
+
+    And store this value in the variable y.          Done
+
+    Then using the image() function draw the apple image on the canvas.       Done 
+
+    After the document.getElementbyId() function add the below lines of code:
+
+    Inside the speak_data variable store the to_number variable and concatenate it with text as “Apples drawn”
+
+    Call the speak() function.
